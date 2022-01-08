@@ -41,3 +41,7 @@ function compareTime() {
 }
 }
 compareTime();
+
+$('.timeBtn').on('click', function() {
+    console.log("this button works")
+})
