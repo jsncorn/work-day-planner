@@ -42,7 +42,13 @@ function compareTime() {
 }
 compareTime();
 
-$('.timeBtn').on('click', function () {
+var hours = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6]
+for (var i = 0; i < hours.length; i++) {
+    var hourValue = localStorage.getItem(hours[i]);
+    $('.input' + hours[i]).val(hourValue);
+}
+
+$('.timeBtn').on('click', function (event) {
     event.preventDefault();
     console.log("this button works");
     var formText = $(this).siblings('.form-control').val();
@@ -50,8 +56,3 @@ $('.timeBtn').on('click', function () {
     localStorage.setItem(timeValue, formText);
 })
 
-var hours = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6]
-for (var i = 0; i < hours.length; i++) {
-    var hourValue = localStorage.getItem(hours[i]);
-    $('.form' + hours[i]).val(hourValue);
-}
