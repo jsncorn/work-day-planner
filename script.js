@@ -28,6 +28,7 @@ function compareTime() {
     currentTime = moment().startOf('hour');
     addHour++;
     formElement = formArray[i];
+    console.log(houredArray)
     if(currentTime.isAfter(houredArray)){
         $('.' + formElement).addClass('bg-secondary')
     }
@@ -40,4 +41,3 @@ function compareTime() {
 }
 }
 compareTime();
-$('#input8').addClass('timePast');

@@ -12,14 +12,10 @@
     padding: 0 20px;
 }
 
-.timePast {
-    background-color: red;
+i {
+    color: white
 }
 
-.timeSame {
-
-}
-
-.timeFuture {
-    
+.timeBtn:hover > i {
+    color: black;
 }
