@@ -7,15 +7,18 @@ function getTime() {
 }
 getTime();
 
-var dayStart = moment().startOf('day').add(7, 'hours');
 
+var formArray = ['input8', 'input9', 'input10', 'input11', 'input12', 'input1', 'input2', 'input3', 'input4', 'input5', 'input6']
 var timeArray = ['time0', 'time1', 'time2', 'time3', 'time4', 'time5', 'time6', 'time7', 'time8', 'time9', 'time10']
+var dayStart = moment().startOf('day').add(7, 'hours');
 for(var i = 0; i < 11; i++ ) {
     var timedArray = timeArray[i]
     var formattedTime = dayStart.add(1, 'hours').format('hh:mm A');
     $('.'+ timedArray).text(formattedTime)
 }
 
+
+//reset daystart since previous function altered it
 dayStart = moment().startOf('day').add(7, 'hours');
 function compareTime() {
     for(var i = 0; i < 11; i ++) {
@@ -23,11 +26,12 @@ function compareTime() {
         var houredArray = timeArray[i]
     houredArray = dayStart.add(addHour, 'hours');
     currentTime = moment().startOf('hour');
-    test++;
+    addHour++;
+    formElement = formArray[i];
     if(currentTime.isAfter(houredArray)){
         console.log('after')
-        console.log(currentTime)
-        console.log(houredArray)
+        $('.' + formElement).addClass('timePast')
+        console.log(formElement)
     }
     else if(currentTime.isBefore(houredArray)){
         console.log('before')
@@ -38,3 +42,4 @@ function compareTime() {
 }
 }
 compareTime();
+$('#input8').addClass('timePast');
