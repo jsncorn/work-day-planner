@@ -47,6 +47,7 @@ $('.timeBtn').on('click', function() {
     console.log("this button works");
     var formText = $(this).siblings('.form-control').val();
     var timeValue = $(this).parent().data('time');
+    localStorage.setItem(timeValue, formText);
 })
 
 var hours = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6]
