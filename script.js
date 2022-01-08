@@ -29,15 +29,13 @@ function compareTime() {
     addHour++;
     formElement = formArray[i];
     if(currentTime.isAfter(houredArray)){
-        console.log('after')
-        $('.' + formElement).addClass('timePast')
-        console.log(formElement)
+        $('.' + formElement).addClass('bg-secondary')
     }
     else if(currentTime.isBefore(houredArray)){
-        console.log('before')
+        $('.' + formElement).addClass('bg-success')
     }
     else if (currentTime.isSame(houredArray)) {
-        console.log('same')
+        $('.' + formElement).addClass('bg-info')
     }
 }
 }
