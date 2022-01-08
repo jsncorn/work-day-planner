@@ -21,7 +21,7 @@ for (var i = 0; i < 11; i++) {
 //reset daystart since previous function altered it
 dayStart = moment().startOf('day').add(7, 'hours');
 function compareTime() {
-    for (var i = 0; i < 11; i++) {
+    for (var i = 0; i < timeArray.length; i++) {
         var addHour = 1;
         var houredArray = timeArray[i]
         houredArray = dayStart.add(addHour, 'hours');
