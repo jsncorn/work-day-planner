@@ -7,3 +7,7 @@ function getTime() {
 }
 getTime();
 
+var dayStart = moment().startOf('day').add(8, 'hours').format('hh:mm A');
+
+var time0 = dayStart
+$('.time0').text(time0)
