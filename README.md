@@ -1,6 +1,6 @@
 # Work Day Planner.
 
-This work day planner will use jQuery to dynamically produce the workday hours of 8AM-6PM, with text content. User can type tasks in the text area and then click on the blue save button to send to local storage - where the page can then be reloaded multiple times while keeping the data. It also features dynamic time, shown at the top of the page. When the time of a task has passed, the area will gray out. If it is current, it will turn green; if it is in the future, it will be a teal color. Demo was unable to be obtained, but will be updated with a working GIF.
+This work day planner will use jQuery to dynamically produce the workday hours of 8AM-6PM, with text content. User can type tasks in the text area and then click on the blue save button to send to local storage - where the page can then be reloaded multiple times while keeping the data. It also features dynamic time, shown at the top of the page. When the time of a task has passed, the area will gray out. If it is current, it will turn teal; if it is in the future, it will be green. Demo was unable to be obtained, but will be updated with a working GIF.
 
 ![Demo Photo](https://github.com/jsncorn/work-day-planner/blob/main/preview.png)
 
