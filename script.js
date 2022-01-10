@@ -22,14 +22,11 @@ for (var i = 0; i < timeArray.length; i++) {
 dayStart = moment().startOf('day').add(7, 'hours');
 function compareTime() {
 
-    for (var i = 0; i < timeArray.length; i++) {
-        var addHour = 1;        
+    for (var i = 0; i < timeArray.length; i++) {    
         var houredArray = timeArray[i];
-        houredArray = dayStart.add(addHour, 'hours');
+        houredArray = dayStart.add(1, 'hours');
         currentTime = moment().startOf('hour');
-        addHour++;
         formElement = formArray[i];
-        console.log(addHour);
         console.log(houredArray)
         if (currentTime.isAfter(houredArray)) {
             $('.' + formElement).addClass('bg-secondary')
